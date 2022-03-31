@@ -34,6 +34,7 @@ const getMainCategories = (req, res) => __awaiter(void 0, void 0, void 0, functi
         res.json(result);
     }
     catch (e) {
+        console.log(e);
         res.json('Unable to get categories');
     }
 });

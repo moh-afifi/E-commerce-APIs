@@ -20,9 +20,8 @@ export class ProductServices {
     async getMainCategories(): Promise<MainCategory[]> {
         try {
             const conn: PoolClient = await Client.connect();
-            const sql: string = 'SELECT * FROM main_category';
+            const sql: string = 'SELECT * FROM "category"';
             const result: QueryResult<any> = await conn.query(sql);
-            console.log(`${result.rows.length}fdsssssssssssssssssssssssssssssssssss`);
             conn.release();
             return result.rows;
         } catch (e) {

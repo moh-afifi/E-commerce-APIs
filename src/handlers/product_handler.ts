@@ -20,6 +20,7 @@ const getMainCategories = async (req: Request, res: Response) => {
         const result: MainCategory[] = await productServices.getMainCategories();
         res.json(result);
     } catch (e) {
+        console.log(e);
         res.json('Unable to get categories');
     }
 };

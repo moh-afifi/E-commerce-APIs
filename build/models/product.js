@@ -22,9 +22,9 @@ class ProductServices {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const conn = yield database_1.default.connect();
-                const sql = 'SELECT * FROM main_category';
+                const sql = 'SELECT * FROM "category"';
                 const result = yield conn.query(sql);
-                console.log(`${result.rows}fdsssssssssssssssssssssssssssssssssss`);
+                console.log(`${result.rows.length}fdsssssssssssssssssssssssssssssssssss`);
                 conn.release();
                 return result.rows;
             }
@@ -39,7 +39,7 @@ class ProductServices {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 const conn = yield database_1.default.connect();
-                const sql = 'SELECT * FROM sub_category WHere categ_id =($1) ';
+                const sql = 'SELECT * FROM sub_category WHere categ_id =($1)';
                 const result = yield conn.query(sql, [`${categoryId}`]);
                 conn.release();
                 return result.rows;
