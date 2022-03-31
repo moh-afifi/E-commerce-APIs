@@ -1,0 +1,16 @@
+{
+    "dev": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "hoda_db",
+        "user": "afifi",
+        "password": "123456"
+    },
+    "test": {
+        "driver": "pg",
+        "host": "127.0.0.1",
+        "database": "hoda_db_test",
+        "user": "afifi_test",
+        "password": "123456"
+    }
+}
